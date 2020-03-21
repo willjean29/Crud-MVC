@@ -91,7 +91,7 @@ function cargarUsuarios(){
                         </div>
                         <form method="POST" class="eliminar-registro" action="eliminarUsuario">
                             <input type="hidden" name="id" value=${usuario.id}>
-                            <button type="submit" class="btn btn-danger eliminar-registro">
+                            <button type="submit" class="btn btn-danger">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </form>
