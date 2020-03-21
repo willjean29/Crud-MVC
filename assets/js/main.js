@@ -37,9 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
         cargarUsuarios();
         setTimeout(() => {
             console.log('quiero eliminar');
+            const btneliminar = document.querySelector('div .eliminar-registro');
+            console.log(btneliminar);
         }, 100);
-        const btneliminar = document.querySelector('div .eliminar-registro');
-        console.log(btneliminar);
+
     }
 
 
