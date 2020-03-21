@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(tablaUsuarios){
         cargarUsuarios();
-        setTimeout(() => {
+        // setTimeout(() => {
             listaDatos = document.querySelector('div .eliminar-registro');
             listaDatos.addEventListener('click',()=>{
                 console.log('click en eliminar');
             })
-        }, 100);
+        // }, 100);
     }
 
     if(linkSalir){
