@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('quiero eliminar');
             const btneliminar = document.querySelector('div .eliminar-registro');
             console.log(btneliminar);
-        }, 100);
+        }, 500);
 
     }
 
@@ -93,7 +93,7 @@ function cargarUsuarios(){
                             </a>
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-danger eliminar-registro">
+                            <button class="btn btn-danger eliminar-registro">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
