@@ -38,7 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             console.log('quiero eliminar');
         }, 100);
+        const btneliminar = document.querySelector('div .eliminar-registro');
+        console.log(btneliminar);
     }
+
+
 
     if(linkSalir){
         linkSalir.addEventListener('click',(e) => {
