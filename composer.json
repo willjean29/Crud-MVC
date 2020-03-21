@@ -1,14 +1,13 @@
 {
-    "name": "CRUD MVC",
-    "description": "Proyecto de prueba para explicar Composer",
-    "type": "project",
+    "name": "willj/crud-mvc",
+    "description": "Prueba de MVC",
     "authors": [
         {
-            "name": "Jean Osco Pupe",
+            "name": "Jean Osco",
             "email": "willjean29@gmail.com"
         }
     ],
     "require": {
-      "ext-mysqli": "*"
+        "ext-mysqli": "*"
     }
 }
