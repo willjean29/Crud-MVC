@@ -35,12 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(tablaUsuarios){
         cargarUsuarios();
-        // setTimeout(() => {
-            listaDatos = document.querySelector('div .eliminar-registro');
-            listaDatos.addEventListener('click',()=>{
-                console.log('click en eliminar');
-            })
-        // }, 100);
+        setTimeout(() => {
+            console.log('quiero eliminar');
+        }, 100);
     }
 
     if(linkSalir){
