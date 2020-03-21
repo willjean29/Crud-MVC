@@ -10,6 +10,7 @@ const linkSalir = document.querySelector('#salir');
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('hola crud heorku')
     const params = new URLSearchParams(location.search);
     const pagina = params.get('pagina');
     const links = document.querySelectorAll('.nav-link');
