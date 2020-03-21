@@ -10,7 +10,7 @@ const linkSalir = document.querySelector('#salir');
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('hola crud heorku')
+    console.log('hola crud')
     const params = new URLSearchParams(location.search);
     const pagina = params.get('pagina');
     const links = document.querySelectorAll('.nav-link');
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if(tablaUsuarios){
         cargarUsuarios();
         setTimeout(() => {
-            listaDatos = document.querySelectorAll('div .eliminar-registro');
-            listaDatos.forEach(boton => {
-                boton.addEventListener('click',formEliminar);
-            });
+            listaDatos = document.querySelector('div .eliminar-registro');
+            listaDatos.addEventListener('click',()=>{
+                console.log('click en eliminar');
+            })
         }, 100);
     }
 
