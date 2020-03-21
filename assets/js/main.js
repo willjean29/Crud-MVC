@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if(tablaUsuarios){
         cargarUsuarios();
         setTimeout(() => {
-            listaDatos = document.querySelectorAll('.eliminar-registro');
-            listaDatos.forEach(form => {
-                form.addEventListener('submit',formEliminar);
+            listaDatos = document.querySelectorAll('div .eliminar-registro');
+            listaDatos.forEach(boton => {
+                boton.addEventListener('click',formEliminar);
             });
         }, 100);
     }
@@ -89,12 +89,11 @@ function cargarUsuarios(){
                                 <i class="fa fa-pencil-alt"></i>
                             </a>
                         </div>
-                        <form method="POST" class="eliminar-registro" action="eliminarUsuario">
-                            <input type="hidden" name="id" value=${usuario.id}>
-                            <button type="submit" class="btn btn-danger">
+                        <div>
+                            <button type="submit" class="btn btn-danger eliminar-registro">
                                 <i class="fas fa-trash"></i>
                             </button>
-                        </form>
+                        </div>
 
                     </div>
                 </td>
@@ -189,7 +188,7 @@ function enviarLoguin(e){
 
 function formEliminar(e){
     e.preventDefault();
-    console.log('elimar');
+    console.log('eliminar');
     // const formDelete = e.target;
     // const fila = formDelete.parentElement.parentElement.parentElement;
     // const datos = new FormData(formDelete);
