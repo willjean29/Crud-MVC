@@ -189,52 +189,52 @@ function enviarLoguin(e){
 
 function formEliminar(e){
     e.preventDefault();
+    console.log('elimar');
+    // const formDelete = e.target;
+    // const fila = formDelete.parentElement.parentElement.parentElement;
+    // const datos = new FormData(formDelete);
+    // const action = formDelete.getAttribute('action');
+    // datos.append('action',action);
+    // const url = 'controllers/ajaxController.php';
 
-    const formDelete = e.target;
-    const fila = formDelete.parentElement.parentElement.parentElement;
-    const datos = new FormData(formDelete);
-    const action = formDelete.getAttribute('action');
-    datos.append('action',action);
-    const url = 'controllers/ajaxController.php';
-
-    Swal.fire({
-        title: '¿Estas seguro?',
-        text: "Un registro eliminado no se puede recuperar",
-        icon: 'warning',
-        showCancelButton: true,
-        cancelButtonText: 'Cancelar',
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, eliminar'
-      }).then(function(result){
-        if(result.value){
-            fetch(url,{
-                method: 'POST',
-                body: datos,
-            })
-            .then(res => res.json())
-            .then(respuesta => {
-                if(respuesta.respuesta == 'ok'){
-                    Swal.fire({
-                        title: 'Correcto',
-                        text: respuesta.msg,
-                        icon: 'success',
-                        timer: 1500
-                    })
+    // Swal.fire({
+    //     title: '¿Estas seguro?',
+    //     text: "Un registro eliminado no se puede recuperar",
+    //     icon: 'warning',
+    //     showCancelButton: true,
+    //     cancelButtonText: 'Cancelar',
+    //     confirmButtonColor: '#3085d6',
+    //     cancelButtonColor: '#d33',
+    //     confirmButtonText: 'Si, eliminar'
+    //   }).then(function(result){
+    //     if(result.value){
+    //         fetch(url,{
+    //             method: 'POST',
+    //             body: datos,
+    //         })
+    //         .then(res => res.json())
+    //         .then(respuesta => {
+    //             if(respuesta.respuesta == 'ok'){
+    //                 Swal.fire({
+    //                     title: 'Correcto',
+    //                     text: respuesta.msg,
+    //                     icon: 'success',
+    //                     timer: 1500
+    //                 })
                     
-                    fila.remove();
-                }
+    //                 fila.remove();
+    //             }
 
-            })
-            .catch(error => {
-                Swal.fire({
-                    title: 'Error',
-                    text: 'Hubo un error',
-                    icon: 'error',
-                    timer: 1500
-                })
-                console.log(error)
-            });
-        }
-      })  
+    //         })
+    //         .catch(error => {
+    //             Swal.fire({
+    //                 title: 'Error',
+    //                 text: 'Hubo un error',
+    //                 icon: 'error',
+    //                 timer: 1500
+    //             })
+    //             console.log(error)
+    //         });
+    //     }
+    //   })  
 }
